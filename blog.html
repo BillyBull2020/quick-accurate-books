@@ -25,6 +25,15 @@
         .blog-read-more:hover { gap: 14px; color: var(--dark); }
         @media (max-width: 768px) { .directory-hero h1 { font-size: 42px; } .blog-grid { padding: 60px 24px; } .blog-card-content { padding: 30px 24px; } }
     </style>
+
+    <!-- Google tag (gtag.js) - Place your GA Measurement ID below -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body style='background: var(--gray-50);'>
     <nav class='navbar' style='background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0;'>
@@ -48,6 +57,7 @@
         </div>
     </div>
     <div class='blog-grid'>
+<!-- [IRONCLAW_HOOK] -->
 <article class='blog-card'>
     <div class='card-image-stub'>
         <span class='stub-badge'>Growth Strategies</span>
