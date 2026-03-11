@@ -28,6 +28,11 @@ heroTl
         opacity: 1,
         duration: 0.6
     }, '-=0.3')
+    .to('.hero-trust-badges', {
+        opacity: 1,
+        y: 0,
+        duration: 0.6
+    }, '-=0.3')
     .to('.floating-card', {
         opacity: 1,
         x: 0,
