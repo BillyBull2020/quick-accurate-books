@@ -2,7 +2,11 @@
 # Ironclaw Auto-Blogger Scheduled Task
 # Set up full environment PATHs because Cron runs in an empty context
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export GEMINI_API_KEY="AIzaSyC2emWcRCCgJxGL_s7RLHP8R2HA-NgnY_w"
+# Load environment variables
+if [ -f .env ]; then
+  source .env
+fi
+export GEMINI_API_KEY
 
 # Move into the server root
 cd "/Users/bdlt/QuickAccutrateBooks" || exit
