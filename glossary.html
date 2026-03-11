@@ -4,102 +4,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookkeeping Glossary - Quick Accurate Books</title>
-    <meta name="description" content="A comprehensive glossary of bookkeeping and accounting terms to help small businesses manage their finances effectively.">
+    <title>The Ultimate Bookkeeping Glossary | Quick Accurate Books</title>
+    <meta name="description" content="A comprehensive, A-Z glossary of bookkeeping, accounting, and financial terms designed specifically for small business owners and founders.">
     <link rel="canonical" href="https://quickaccuratebooks.com/glossary.html">
     <meta property="og:url" content="https://quickaccuratebooks.com/glossary.html">
-    <meta property="og:title" content="Bookkeeping Glossary - Quick Accurate Books">
+    <meta property="og:title" content="The Ultimate Bookkeeping Glossary | Quick Accurate Books">
     <meta property="og:image" content="https://quickaccuratebooks.com/tanya-frank.jpg">
-    <link rel="stylesheet" href="styles.css?v=11">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=12">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .glossary-header { padding: 160px 0 80px; background: linear-gradient(135deg, var(--primary-blue), var(--light-blue)); color: var(--white); text-align: center; }
-        .glossary-header h1 { font-family: var(--font-display); font-size: 56px; margin-bottom: 20px; }
-        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 80px 0; }
-        .glossary-item { background: var(--gray-50); padding: 30px; border-radius: 20px; border-left: 4px solid var(--accent-green); transition: transform 0.3s; }
-        .glossary-item:hover { transform: translateY(-5px); background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .glossary-term { font-family: var(--font-display); font-size: 24px; color: var(--primary-blue); margin-bottom: 12px; }
-        .glossary-def { color: var(--gray-600); line-height: 1.6; }
+        .glossary-hero { 
+            padding: 180px 24px 100px; 
+            background: linear-gradient(135deg, var(--dark) 0%, var(--gray-800) 100%); 
+            color: var(--white); 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .glossary-hero::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 60%);
+            z-index: 1;
+        }
+        .glossary-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .glossary-hero h1 { 
+            font-family: var(--font-display); 
+            font-size: 64px; 
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #fff, var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glossary-hero p {
+            font-size: 20px;
+            color: var(--gray-100);
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 20px 30px 20px 60px;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-size: 18px;
+            font-family: var(--font-primary);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .search-container input:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+        }
+        .search-icon {
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .glossary-alphabet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 60px 24px;
+            background: var(--gray-50);
+        }
+        .alphabet-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            color: var(--primary-green);
+            font-weight: 700;
+            font-family: var(--font-display);
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .alphabet-btn:hover, .alphabet-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.3);
+        }
+
+        .glossary-main {
+            padding: 60px 24px 120px;
+            background: var(--gray-50);
+            min-height: 50vh;
+        }
+        .glossary-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); 
+            gap: 32px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .glossary-item { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 24px; 
+            border-left: 6px solid var(--accent-green); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        .glossary-item::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; width: 100px; height: 100px;
+            background: radial-gradient(circle top right, rgba(20, 184, 166, 0.1), transparent);
+            border-radius: 0 24px 0 100%;
+        }
+        .glossary-item:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08); 
+            border-left-color: var(--primary-green);
+        }
+        .glossary-term { 
+            font-family: var(--font-display); 
+            font-size: 26px; 
+            color: var(--dark); 
+            margin-bottom: 16px; 
+            position: relative;
+            z-index: 2;
+        }
+        .glossary-def { 
+            color: var(--gray-600); 
+            line-height: 1.7; 
+            font-size: 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 60px;
+            font-size: 20px;
+            color: var(--gray-600);
+            display: none;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--light-blue), var(--primary-green));
+            padding: 100px 24px;
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        .cta-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .glossary-hero h1 { font-size: 42px; }
+            .glossary-grid { grid-template-columns: 1fr; }
+            .glossary-item { padding: 30px 24px; }
+            .glossary-term { font-size: 22px; }
+            .cta-section h2 { font-size: 36px; }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" style="background: rgba(2, 6, 23, 0.8); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0;">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" class="logo" style="text-decoration: none;">
-                <span class="logo-quick">Quick</span><span class="logo-accurate">Accurate</span>
-                <span class="logo-books">BOOKS</span>
+            <a href="index.html" class="logo" style="text-decoration: none; color: white;">
+                <span class="logo-quick" style="color: white;">Quick</span><span class="logo-accurate" style="color: var(--accent-green);">Accurate</span>
+                <span class="logo-books" style="color: rgba(255,255,255,0.5);">BOOKS</span>
             </a>
             <div class="nav-links" style="display: flex;">
-                <a href="index.html#services">Services</a>
-                <a href="blog.html">Blog</a>
-                <a href="index.html#contact" class="cta-button">Free Consultation</a>
+                <a href="index.html#services" style="color: white; opacity: 0.8;">Services</a>
+                <a href="blog.html" style="color: white; opacity: 0.8;">Blog</a>
+                <a href="glossary.html" style="color: var(--accent-green); font-weight: 700;">Glossary</a>
             </div>
+            <a href="index.html#contact" class="btn-primary" style="padding: 12px 24px; font-size: 14px;">Free Consultation</a>
         </div>
     </nav>
 
-    <div class="glossary-header">
-        <div class="container">
-            <h1>Glossary of Terms</h1>
-            <p>Demystifying bookkeeping jargon so you can understand your business health.</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="glossary-grid">
-            <div class="glossary-item">
-                <div class="glossary-term">Accounts Payable (AP)</div>
-                <div class="glossary-def">Money that a business owes to its suppliers or vendors for goods or services received on credit. It is recorded as a liability on the balance sheet.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Accounts Receivable (AR)</div>
-                <div class="glossary-def">Money owed to a business by its customers for goods or services delivered but not yet paid for. It is recorded as an asset.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Accrual Basis Accounting</div>
-                <div class="glossary-def">An accounting method where revenue and expenses are recorded when they are incurred, regardless of when cash is officially exchanged.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Balance Sheet</div>
-                <div class="glossary-def">A core financial statement that summarizes a company's assets, liabilities, and shareholders' equity at a specific point in time.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Cash Basis Accounting</div>
-                <div class="glossary-def">An accounting method where revenues and expenses are recorded only when cash actually enters or leaves the bank account.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Chart of Accounts (COA)</div>
-                <div class="glossary-def">An organized index of all the financial accounts in the general ledger of a company. It provides a map to how transactions are categorized.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Depreciation</div>
-                <div class="glossary-def">The process of allocating the cost of a physical asset over its useful life. It represents how much an asset's value has been utilized.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">General Ledger (GL)</div>
-                <div class="glossary-def">The master set of accounts that summarizes all transactions occurring within an entity. It serves as the primary source for financial statements.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Net Income</div>
-                <div class="glossary-def">Also known as the "bottom line," this is a company's total revenue minus all of its expenses, taxes, and costs during a specific period.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Reconciliation</div>
-                <div class="glossary-def">The process of comparing internal financial records (like your ledger) against external records (like a bank statement) to ensure they match perfectly.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Profit and Loss Statement (P&L)</div>
-                <div class="glossary-def">A financial statement that summarizes the revenues, costs, and expenses incurred during a specific period, usually a fiscal quarter or year.</div>
-            </div>
-            <div class="glossary-item">
-                <div class="glossary-term">Trial Balance</div>
-                <div class="glossary-def">A bookkeeping worksheet in which the balances of all ledgers are compiled into equal debit and credit account column totals.</div>
+    <!-- Hero Sandbox -->
+    <header class="glossary-hero">
+        <div class="glossary-hero-content">
+            <h1>The Ultimate Bookkeeping Glossary</h1>
+            <p>We believe financial clarity is the foundation of growth. Use our comprehensive dictionary to translate complex accounting jargon into actionable business intelligence.</p>
+            
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="glossarySearch" placeholder="Search for a term (e.g., 'Amortization', 'EBITDA')...">
             </div>
         </div>
+    </header>
+
+    <!-- Alphabet Filter -->
+    <div class="glossary-alphabet" id="alphabet-container">
+        <button class="alphabet-btn active" data-letter="ALL">All</button>
+        <!-- JS fills A-Z -->
     </div>
 
-    <footer style="background: var(--dark); color: var(--white); padding: 40px 0; text-align: center;">
-        <p>© 2026 Quick Accurate Books. All rights reserved.</p>
+    <!-- Main Grid -->
+    <main class="glossary-main">
+        <div class="glossary-grid" id="glossaryGrid">
+            <div class="no-results" id="noResults">No matching terms found. Try a different search!</div>
+            <!-- Populated by JS -->
+        </div>
+    </main>
+
+    <!-- Interactive CTA -->
+    <section class="cta-section">
+        <h2>Tired of the Jargon?</h2>
+        <p>You shouldn't need a dictionary to understand your own business's health. Let an Intuit Certified Expert handle the numbers so you can focus on scale.</p>
+        <a href="index.html#contact" class="btn-primary" style="background: var(--white); color: var(--primary-green); box-shadow: 0 10px 40px rgba(0,0,0,0.2);">Schedule Your Free Audit Today</a>
+    </section>
+
+    <footer style="background: var(--dark); color: var(--gray-600); padding: 60px 0; text-align: center; font-size: 14px;">
+        <p>© 2026 Quick Accurate Books. Expert Services in Thornton, CO. All rights reserved.</p>
     </footer>
+
+    <script>
+        const dictionary = [
+            { term: "Accounts Payable (AP)", def: "The total amount of money a business owes to suppliers or vendors for goods or services received on credit. It operates as a short-term liability on the balance sheet." },
+            { term: "Accounts Receivable (AR)", def: "The total amount of money owed to a business by its customers for goods or services that have been delivered but not yet paid for. It represents a liquid asset." },
+            { term: "Accrual Accounting", def: "An advanced accounting method where revenue and expenses are officially recorded when they are earned or incurred, regardless of when cash is actually exchanged. Required for deeper financial forecasting." },
+            { term: "Amortization", def: "The practice of spreading an intangible asset's cost over its useful life (e.g., patents, software). It functions similarly to depreciation but applies to non-physical assets." },
+            { term: "Assets", def: "Everything of value that your business owns. This includes tangible items like cash, equipment, and inventory, as well as intangibles like trademarks and accounts receivable." },
+            { term: "Balance Sheet", def: "A fundamental financial statement that provides a snapshot of what a company owns (assets) and owes (liabilities), alongside the owner's equity at a specific moment in time." },
+            { term: "Burn Rate", def: "The rate at which a company is spending its capital to finance overhead before generating positive cash flow from operations. Crucial for startups." },
+            { term: "Capital Account", def: "An account reflecting the net worth of a business at a specific point in time. It is calculated as Assets minus Liabilities." },
+            { term: "Cash Basis Accounting", def: "A simple accounting method where revenues and expenses are recognized only when money physically changes hands. Common for very small, localized businesses." },
+            { term: "Cash Flow Statement", def: "A mandatory financial report that details how cash entered and exited the business within a given time period. It bridges the gap between the income statement and balance sheet." },
+            { term: "Chart of Accounts (COA)", def: "The master index of all accounts in the general ledger. It provides the architectural map to how every single transaction is categorized and organized." },
+            { term: "Cost of Goods Sold (COGS)", def: "The direct, tangible costs attributable to the production of the goods sold by a company. This includes the cost of materials and direct labor, but excludes indirect expenses like distribution or marketing." },
+            { term: "Depreciation", def: "An accounting method of allocating the cost of a tangible asset over its useful life. It represents how much of an asset's value has been officially consumed." },
+            { term: "Double-Entry Bookkeeping", def: "The gold-standard accounting system where every transaction has corresponding and opposite effects in at least two different accounts. Ensures the accounting equation remains balanced." },
+            { term: "EBITDA", def: "Earnings Before Interest, Taxes, Depreciation, and Amortization. A vital metric used to evaluate a company's operating performance and raw earning potential without the impact of financing decisions." },
+            { term: "Equity", def: "The remaining value that would be returned to a company's shareholders if all assets were liquidated and all of the company's debts were paid off." },
+            { term: "Fiscal Year", def: "A one-year period that companies and governments use for accounting and budgeting. It does not necessarily need to follow the standard calendar year (Jan 1 to Dec 31)." },
+            { term: "Fixed Cost", def: "A cost that does not change with an increase or decrease in the amount of goods or services produced or sold (e.g., rent, insurance, salaries)." },
+            { term: "General Ledger (GL)", def: "The master database wherein a company stores all its financial data. It is the core source used to build out the major financial statements." },
+            { term: "Gross Margin", def: "Net sales revenue minus the cost of goods sold. It represents the proportion of each dollar of revenue that the company retains as gross profit." },
+            { term: "Inventory", def: "The raw materials, work-in-process goods, and completely finished goods that are considered to be the portion of a business's assets that are ready or will be ready for sale." },
+            { term: "Invoice", def: "A commercial document issued by a seller to a buyer, relating to a sale transaction and indicating the products, quantities, and agreed prices. It establishes an Accounts Receivable." },
+            { term: "Journal Entry", def: "The formal logging of a transaction into the accounting journal. It consists of the transaction date, amounts to be debited and credited, and a description." },
+            { term: "Liabilities", def: "The financial debts or obligations that arise during the course of business operations. They are settled over time through the transfer of economic benefits including money, goods, or services." },
+            { term: "Net Income", def: "Often called the bottom line. It is calculated by taking revenues and adjusting for the cost of doing business, depreciation, interest, taxes, and other expenses." },
+            { term: "Overhead", def: "Ongoing indirect business costs not directly attributed to creating a product or service. Examples include rent, utilities, and administrative salaries." },
+            { term: "Petty Cash", def: "A small amount of discretionary cash that a business keeps on hand to pay for minor, incidental expenses like office supplies or quick reimbursements." },
+            { term: "Profit and Loss Statement (P&L)", def: "A financial statement that summarizes the revenues, costs, and expenses incurred during a specified period. It indicates whether the company is generating profit or losing money." },
+            { term: "Reconciliation", def: "The critical process of matching the balances in an entity's accounting records for a cash account to the corresponding information on a bank statement to identify errors or fraud." },
+            { term: "Retained Earnings", def: "The historical cumulative net income of a corporation that is retained by the business rather than paid out as dividends to shareholders." },
+            { term: "Return on Investment (ROI)", def: "A highly-used performance measure that evaluates the efficiency of an investment. Calculated by dividing the return of an investment by the cost of the investment." },
+            { term: "Trial Balance", def: "An internal bookkeeping worksheet where all ledger balances are compiled into equal debit and credit columns to verify mathematical accuracy before producing financial statements." },
+            { term: "Variable Cost", def: "Corporate expenses that change in direct proportion to how much a company produces or sells (e.g., raw materials, direct labor, shipping costs)." },
+            { term: "Working Capital", def: "The difference between a company’s current assets and its current liabilities. It measures a company's operational liquidity and short-term financial health." }
+        ];
+
+        dictionary.sort((a, b) => a.term.localeCompare(b.term));
+
+        const grid = document.getElementById('glossaryGrid');
+        const searchInput = document.getElementById('glossarySearch');
+        const noResults = document.getElementById('noResults');
+        const alphabetContainer = document.getElementById('alphabet-container');
+
+        // Create Alphabet Buttons
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        alphabet.forEach(letter => {
+            const btn = document.createElement('button');
+            btn.className = 'alphabet-btn';
+            btn.dataset.letter = letter;
+            btn.textContent = letter;
+            alphabetContainer.appendChild(btn);
+        });
+
+        const renderDictionary = (terms) => {
+            // Remove existing items, keep noResults
+            const items = grid.querySelectorAll('.glossary-item');
+            items.forEach(item => item.remove());
+
+            if (terms.length === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+                terms.forEach(entry => {
+                    const item = document.createElement('div');
+                    item.className = 'glossary-item';
+                    item.innerHTML = \`
+                        <div class="glossary-term">\${entry.term}</div>
+                        <div class="glossary-def">\${entry.def}</div>
+                    \`;
+                    grid.appendChild(item);
+                });
+            }
+        };
+
+        // Initial render
+        renderDictionary(dictionary);
+
+        // Search Logic
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            // Reset alphabet selection
+            document.querySelectorAll('.alphabet-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.alphabet-btn[data-letter="ALL"]').classList.add('active');
+
+            const filtered = dictionary.filter(entry => 
+                entry.term.toLowerCase().includes(term) || entry.def.toLowerCase().includes(term)
+            );
+            renderDictionary(filtered);
+        });
+
+        // Alphabet Logic
+        document.querySelectorAll('.alphabet-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const letter = e.target.dataset.letter;
+                
+                // Styling
+                document.querySelectorAll('.alphabet-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                // Reset search
+                searchInput.value = '';
+
+                if (letter === "ALL") {
+                    renderDictionary(dictionary);
+                } else {
+                    const filtered = dictionary.filter(entry => entry.term.toUpperCase().startsWith(letter));
+                    renderDictionary(filtered);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

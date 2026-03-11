@@ -1,57 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Basis vs. Accrual Accounting: What’s Best for You? - Quick Accurate Books</title>
-    <meta name="description" content="Understanding the key differences between accounting methods and when to switch.">
-    <link rel="canonical" href="https://quickaccuratebooks.com/cash-basis-vs-accrual-accounting.html">
-    <meta property="og:url" content="https://quickaccuratebooks.com/cash-basis-vs-accrual-accounting.html">
-    <meta property="og:title" content="Cash Basis vs. Accrual Accounting: What’s Best for You? - Quick Accurate Books">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://quickaccuratebooks.com/tanya-frank.jpg">
-    <link rel="stylesheet" href="styles.css?v=11">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Cash Basis vs. Accrual Accounting: What’s Best for You? | Bookkeeping Insights | Quick Accurate Books</title>
+    <meta name='description' content='Understanding the deep structural differences between accounting methods and knowing exactly when to switch to scale.'>
+    <link rel='canonical' href='https://quickaccuratebooks.com/cash-basis-vs-accrual-accounting.html'>
+    <meta property='og:url' content='https://quickaccuratebooks.com/cash-basis-vs-accrual-accounting.html'>
+    <meta property='og:title' content='Cash Basis vs. Accrual Accounting: What’s Best for You? - Quick Accurate Books'>
+    <meta property='og:description' content='Understanding the deep structural differences between accounting methods and knowing exactly when to switch to scale.'>
+    <meta property='og:type' content='article'>
+    <meta property='og:image' content='https://quickaccuratebooks.com/tanya-frank.jpg'>
+    <link rel='stylesheet' href='styles.css?v=12'>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap' rel='stylesheet'>
     <style>
-        .blog-header { padding: 160px 0 80px; background: linear-gradient(135deg, var(--primary-blue), var(--light-blue)); color: var(--white); text-align: center; }
-        .blog-header h1 { font-family: var(--font-display); font-size: 48px; margin-bottom: 20px; max-width: 900px; margin: 0 auto; }
-        .article-content { max-width: 800px; margin: 80px auto; font-size: 18px; line-height: 1.8; color: var(--gray-800); padding: 0 24px; }
-        .article-content p { margin-bottom: 24px; }
+        body { background: var(--gray-50); line-height: 1.8; color: var(--gray-800); }
+        .blog-hero { padding: 160px 24px 80px; background: linear-gradient(135deg, var(--dark), var(--gray-800)); color: var(--white); text-align: center; position: relative; }
+        .blog-hero .category { display: inline-block; background: rgba(20, 184, 166, 0.2); color: var(--accent-green); padding: 6px 16px; border-radius: 50px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; border: 1px solid rgba(20, 184, 166, 0.4); }
+        .blog-hero h1 { font-family: var(--font-display); font-size: 56px; line-height: 1.1; margin-bottom: 30px; max-width: 900px; margin: 0 auto; }
+        .blog-meta { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 40px; opacity: 0.8; font-size: 15px; }
+        .blog-meta .author-info { display: flex; align-items: center; gap: 12px; }
+        .blog-meta img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent-green); object-fit: cover; }
+        .blog-layout { display: grid; grid-template-columns: 1fr 340px; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 60px 24px; align-items: flex-start; }
+        .article-body { background: var(--white); padding: 60px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); font-size: 19px; font-weight: 300; }
+        .article-body p.lead { font-size: 24px; font-weight: 400; color: var(--dark); margin-bottom: 40px; line-height: 1.6; }
+        .article-body h3 { font-family: var(--font-display); font-size: 32px; color: var(--dark); margin: 60px 0 24px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-100); }
+        .article-body p { margin-bottom: 24px; }
+        .article-body ul, .article-body ol { margin: 0 0 32px 24px; padding: 0; }
+        .article-body li { margin-bottom: 16px; padding-left: 12px; }
+        .article-body li strong { color: var(--primary-green); }
+        .article-body blockquote { margin: 40px 0; padding: 30px 40px; background: var(--gray-50); border-left: 6px solid var(--accent-green); border-radius: 0 20px 20px 0; font-size: 22px; font-style: italic; color: var(--light-blue); }
+        .insight-box { background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(13, 148, 136, 0.05)); border: 1px solid rgba(20, 184, 166, 0.2); padding: 30px; border-radius: 16px; margin: 40px 0; }
+        .insight-box h4 { font-family: var(--font-display); color: var(--primary-green); font-size: 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .insight-box p { margin: 0; font-size: 17px; }
+        .blog-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 30px; }
+        .author-card { background: var(--white); padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border-top: 5px solid var(--primary-green); }
+        .author-card img { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px; border: 3px solid var(--gray-100); }
+        .author-card h4 { font-family: var(--font-display); font-size: 20px; color: var(--dark); margin-bottom: 8px; }
+        .author-card p { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
+        .author-card a { display: inline-block; width: 100%; padding: 14px; background: var(--dark); color: var(--white); text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px; transition: all 0.3s; }
+        .author-card a:hover { background: var(--primary-green); transform: translateY(-2px); }
+        @media (max-width: 1024px) { .blog-layout { grid-template-columns: 1fr; } .blog-sidebar { position: static; } }
+        @media (max-width: 768px) { .blog-hero h1 { font-size: 38px; } .article-body { padding: 30px 24px; } .article-body h3 { font-size: 26px; } .article-body p.lead { font-size: 20px; } }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="index.html" class="logo" style="text-decoration: none;">
-                <span class="logo-quick">Quick</span><span class="logo-accurate">Accurate</span>
-                <span class="logo-books">BOOKS</span>
+    <nav class='navbar' style='background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0;'>
+        <div class='container' style='display: flex; justify-content: space-between; align-items: center;'>
+            <a href='index.html' class='logo' style='text-decoration: none;'>
+                <span class='logo-quick' style='color: white;'>Quick</span><span class='logo-accurate' style='color: var(--accent-green);'>Accurate</span>
+                <span class='logo-books' style='color: rgba(255,255,255,0.5);'>BOOKS</span>
             </a>
-            <div class="nav-links" style="display: flex;">
-                <a href="index.html#services">Services</a>
-                <a href="blog.html">Blog</a>
-                <a href="glossary.html">Glossary</a>
+            <div class='nav-links' style='display: flex;'>
+                <a href='index.html#services' style='color: white; opacity: 0.8;'>Services</a>
+                <a href='blog.html' style='color: var(--accent-green); font-weight: 700;'>Blog</a>
+                <a href='glossary.html' style='color: white; opacity: 0.8;'>Glossary</a>
             </div>
+            <a href='index.html#contact' class='btn-primary' style='padding: 12px 24px; font-size: 14px;'>Free Consultation</a>
         </div>
     </nav>
-
-    <div class="blog-header">
-        <div class="container">
+    <header class='blog-hero'>
+        <div class='container'>
+            <span class='category'>Financial Strategy</span>
             <h1>Cash Basis vs. Accrual Accounting: What’s Best for You?</h1>
-            <p>By Ironclaw Intelligence Engine | Quick Accurate Books</p>
+            <div class='blog-meta'>
+                <div class='author-info'>
+                    <img src='tanya-frank.jpg' alt='Tanya L. Frank'>
+                    <span>Written by Tanya L. Frank</span>
+                </div>
+                <span>•</span>
+                <span>March 2026</span>
+                <span>•</span>
+                <span>7 min read</span>
+            </div>
         </div>
+    </header>
+    <div class='blog-layout'>
+        <article class='article-body'>
+            <p class='lead'>Choosing between cash and accrual accounting isn't just an administrative chore; it fundamentally changes the exact lens through which you view your business’s financial health and trajectory.</p><h3>What is Cash Basis Accounting?</h3><p>Cash basis is incredibly simple, making it the default choice for new sole proprietors. You record income <strong>only when it hits your bank account</strong>, and you record expenses <strong>only when the cash leaves your account</strong>. If you send an invoice on January 1st, but the client pays on February 15th, the income is recorded in February.</p><p><strong>Pros:</strong> Extremely easy to track cash flow since your books mimic your exact bank balance.</p><p><strong>Cons:</strong> It can give a wildly distorted view of long-term profitability. If you buy $10,000 in inventory in cash in March, March looks terribly unprofitable, even though you are going to sell that inventory over the next 6 months.</p><h3>What is Accrual Accounting?</h3><p>Accrual accounting is the required standard for larger businesses and GAAP compliance. It records revenue <strong>when it’s earned</strong> (even if you haven't been paid cash yet), and expenses <strong>when they are incurred</strong>.</p><p>Using the previous example: If you send an invoice in January, the revenue shows up on your January P&L as Accounts Receivable, artificially boosting January's profitability even though the cash hasn't arrived.</p><p><strong>Pros:</strong> Provides a massive, mathematically accurate picture of your actual operational profitability and margins.</p><p><strong>Cons:</strong> Requires diligent tracking of Accounts Receivable and Accounts Payable to ensure you don't run out of liquid cash while mathematically appearing profitable.</p><div class='insight-box'><h4>The Verdict ⚖️</h4><p>If you are a solo service provider making under $200k, Cash basis is fine. If you hold inventory, have payroll, or want to take on investors, Accrual is an absolute necessity.</p></div>
+            <div style='margin-top: 80px; padding: 40px; background: linear-gradient(135deg, var(--gray-50), white); border: 2px solid var(--gray-100); border-radius: 20px; text-align: center;'>
+                <h3 style='margin-top: 0; border: none; padding: 0;'>Stop leaving money on the table.</h3>
+                <p>Ensure your financials are perfectly architected right now. Claim your 100% free structural audit.</p>
+                <a href='index.html#contact' class='btn-primary' style='display: inline-block;'>Book Your Free Consultation</a>
+            </div>
+        </article>
+        <aside class='blog-sidebar'>
+            <div class='author-card'>
+                <img src='tanya-frank.jpg' alt='Tanya Frank'>
+                <h4>Tanya L. Frank</h4>
+                <p>Founder & Intuit Certified QuickBooks Expert with 20+ Years Experience mapping financial paths for startups and SMBs.</p>
+                <a href='index.html#about'>Meet Tanya →</a>
+            </div>
+            <div style='background: var(--dark); color: white; padding: 40px 30px; border-radius: 20px; text-align: center; position: relative; overflow: hidden;'>
+                <div style='position: absolute; top: -30px; right: -30px; font-size: 100px; opacity: 0.1;'>📈</div>
+                <h4 style='font-family: var(--font-display); font-size: 24px; margin-bottom: 12px; position:relative;'>Get Expert Updates</h4>
+                <p style='font-size: 14px; opacity: 0.8; margin-bottom: 24px; position:relative;'>Join our private newsletter for tax updates and cash flow strategies.</p>
+                <form action='https://formspree.io/f/xzddbqkn' method='POST' style='position:relative;'>
+                    <input type='email' name='email' placeholder='Email Address' required style='width: 100%; padding: 14px; border-radius: 8px; border: none; margin-bottom: 12px; font-family: var(--font-primary);'>
+                    <button type='submit' class='btn-primary' style='width: 100%; border: none;'>Subscribe</button>
+                </form>
+            </div>
+        </aside>
     </div>
-
-    <div class="article-content">
-        <p>Choosing between cash and accrual accounting fundamentally changes how you view your business’s health. Cash basis is simple: you record income when it hits the bank, and expenses when they leave.</p><p>Accrual accounting, however, records revenue when it’s earned (even if you haven't been paid yet). While more complex, accrual accounting provides a far more accurate picture of your long-term profitability. At Quick Accurate Books, we help you determine exactly which method fits your growth stage.</p>
-        
-        <div style="margin-top: 60px; padding: 40px; background: var(--gray-50); border-radius: 20px; text-align: center;">
-            <h3 style="font-family: var(--font-display); font-size: 24px; color: var(--primary-blue); margin-bottom: 16px;">Ready to stress less about your books?</h3>
-            <p style="margin-bottom: 24px; font-size: 16px;">Book a free consultation with Tanya to get your financials on track.</p>
-            <a href="index.html#contact" class="btn-primary" style="display: inline-block;">Schedule Consultation</a>
-        </div>
-    </div>
-
-    <footer style="background: var(--dark); color: var(--white); padding: 40px 0; text-align: center;">
+    <footer style='background: var(--dark); color: var(--gray-600); padding: 40px 0; text-align: center; font-size: 14px;'>
         <p>© 2026 Quick Accurate Books. All rights reserved.</p>
     </footer>
 </body>
