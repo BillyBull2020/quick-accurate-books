@@ -356,15 +356,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
-// ===== LOADING OVERLAY =====
-const loadingOverlay = document.getElementById('loading-overlay');
-if (loadingOverlay) {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loadingOverlay.classList.add('hidden');
-        }, 500);
-    });
-}
+// Loading overlay has been removed for better performance
 
 // ===== BACK TO TOP BUTTON =====
 const backToTopBtn = document.getElementById('back-to-top');

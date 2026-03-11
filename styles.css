@@ -6,16 +6,16 @@
 }
 
 :root {
-    --primary-blue: #1e3a8a;
-    --primary-green: #166534;
-    --accent-green: #22c55e;
-    --light-blue: #3b82f6;
-    --dark: #0f172a;
+    --primary-blue: #0f172a; /* Slate 900 - Premium Charcoal */
+    --primary-green: #0d9488; /* Premium Teal */
+    --accent-green: #14b8a6; /* Vibrant Teal Accent */
+    --light-blue: #334155; /* Slate 700 */
+    --dark: #020617; /* Deepest Charcoal */
     --white: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-600: #4b5563;
-    --gray-800: #1f2937;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-600: #64748b;
+    --gray-800: #1e293b;
     --font-primary: 'Inter', sans-serif;
     --font-display: 'Outfit', sans-serif;
 }
@@ -47,9 +47,11 @@ body {
     right: 0;
     z-index: 1000;
     padding: 16px 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .navbar .container {
@@ -1239,7 +1241,8 @@ section {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .exit-popup-content {
@@ -1357,20 +1360,27 @@ section {
 .mobile-call-btn {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
     color: var(--white);
     text-decoration: none;
-    padding: 14px 28px;
+    padding: 16px 32px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 16px;
-    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.5);
     z-index: 1000;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: max-content;
+}
+
+.mobile-call-btn:active {
+    transform: translateX(-50%) scale(0.95);
 }
 
 .mobile-call-btn .call-icon {
