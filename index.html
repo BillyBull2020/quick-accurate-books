@@ -205,7 +205,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="chatbot.css?v=1">
 </head>
 
 <body>
@@ -709,33 +708,5 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script defer src="script.js?v=3"></script>
-
-    <!-- Chatbot Widget -->
-    <div class="chatbot-widget">
-        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open Chat">
-            <span class="bot-icon">🎙️</span>
-        </button>
-        <div class="chatbot-window glass-card" id="chatbot-window">
-            <div class="chatbot-header">
-                <div class="bot-profile">
-                    <span class="bot-status"></span>
-                    <span class="bot-name">Tanya's AI Assistant</span>
-                </div>
-                <button class="chatbot-close" id="chatbot-close">✕</button>
-            </div>
-            <div class="chatbot-messages" id="chatbot-messages">
-                <div class="message bot-message">
-                    Hello! I'm Tanya's virtual assistant. I can help you understand our bookkeeping services or schedule a consultation. Tap the microphone to speak, or type a message!
-                </div>
-            </div>
-            <div class="chatbot-input-area">
-                <button class="voice-btn" id="voice-btn" aria-label="Use Voice Chat">🎤</button>
-                <input type="text" id="chat-input" placeholder="Type or speak a message...">
-                <button class="send-btn" id="send-btn">➤</button>
-            </div>
-        </div>
-    </div>
-    <script defer src="chatbot.js?v=1"></script>
 </body>
-
 </html>
