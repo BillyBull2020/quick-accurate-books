@@ -52,50 +52,20 @@ function stopRecording() {
 let hasGreeted = false;
 
 function speakText(text) {
-    if (!('speechSynthesis' in window)) return;
-    
-    const synth = window.speechSynthesis;
-    let voices = synth.getVoices();
-    
-    synth.cancel();
-    
-    const utterance = new SpeechSynthesisUtterance(text);
-    // Slightly higher pitch and speed for a professional, energetic female voice
-    utterance.pitch = 1.15;
-    utterance.rate = 1.05;
-    
-    // Search for high-quality native female voices
-    let preferredVoice = voices.find(v => 
-        v.name.includes('Samantha') || 
-        v.name.includes('Victoria') || 
-        v.name.includes('Karen') || 
-        v.name.includes('Google US English') || 
-        v.name.includes('Google UK English Female')
-    );
-    
-    if (!preferredVoice) {
-        preferredVoice = voices.find(v => v.lang.includes('en') && v.name.toLowerCase().includes('female'));
-    }
-    
-    if (preferredVoice) utterance.voice = preferredVoice;
-    
-    synth.speak(utterance);
+    // Intentionally removed. The user stated native browser TTS voices sound terrible 
+    // and robotic, and specifically requested to remove the audio output rather than 
+    // having a generic/cheap voice.
 }
 
 if (chatbotToggle && chatbotWindow) {
     chatbotToggle.addEventListener('click', () => {
-        // Initialize loading voices early if not already done
-        if ('speechSynthesis' in window) {
-            window.speechSynthesis.getVoices();
-        }
-        
         chatbotWindow.classList.add('active');
         
-        // Speak initial greeting instantly upon clicking the widget to open
+        // Push initial text greeting instantly upon clicking the widget to open
         if (!hasGreeted) {
             hasGreeted = true;
             setTimeout(() => {
-                speakText("Hello! I'm Tanya's virtual assistant. I can help you understand our bookkeeping services or schedule a consultation. Tap the microphone to speak, or type a message!");
+                addMessage("Hello! I'm Tanya's virtual assistant. I can help you understand our bookkeeping services or schedule a consultation. Tap the microphone to speak, or type a message!", 'bot');
             }, 300);
         }
     });
@@ -119,10 +89,7 @@ function addMessage(text, sender) {
     chatbotMessages.appendChild(msgDiv);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
-    // Fast Voice Synthesizer for Bot
-    if (sender === 'bot') {
-        speakText(text);
-    }
+    // Bot speaking feature disabled
 }
 
 function handleBotResponse(userText) {
@@ -175,9 +142,6 @@ if (chatInput) {
 
 if (voiceBtn) {
     voiceBtn.addEventListener('click', () => {
-        // Initialize voices for synthesis purely down here if needed
-        window.speechSynthesis.getVoices();
-
         if (isRecording) {
             recognition.stop();
             stopRecording();
