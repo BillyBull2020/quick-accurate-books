@@ -25,6 +25,7 @@ async function runIronclaw() {
     Invent a unique, high-conversion topic that hasn't been overly done. Focus on value, clarity, and authority.
 
     IMPORTANT: Reply ONLY with valid JSON. Do not use Markdown wrappers like \`\`\`json. 
+    CRITICAL: The entire JSON response MUST be fully minified. The "content" value MUST be on a single physical line with NO RAW NEWLINES (\\n) and NO RAW TABS (\\t). 
 
     The JSON must contain exact properties:
     {
@@ -36,7 +37,13 @@ async function runIronclaw() {
   `;
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ 
+      model: "gemini-2.5-flash",
+      generationConfig: {
+        responseMimeType: "application/json",
+        temperature: 0.9
+      }
+    });
     const result = await model.generateContent(prompt);
     let rawText = result.response.text();
     
