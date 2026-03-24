@@ -10,17 +10,10 @@
     <meta property="og:url" content="https://quickaccuratebooks.com/glossary.html">
     <meta property="og:title" content="The Ultimate Bookkeeping Glossary | Quick Accurate Books">
     <meta property="og:image" content="https://quickaccuratebooks.com/tanya-frank.jpg">
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=28">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .glossary-hero { 
-            padding: 180px 24px 100px; 
-            background: linear-gradient(135deg, var(--dark) 0%, var(--gray-800) 100%); 
-            color: var(--white); 
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+        .glossary-hero { display: none; }
         .glossary-hero::after {
             content: '';
             position: absolute;
@@ -171,7 +164,7 @@
         }
         
         .cta-section {
-            background: linear-gradient(135deg, var(--light-blue), var(--primary-green));
+            background: var(--section-gradient);
             padding: 100px 24px;
             text-align: center;
             color: var(--white);
@@ -215,27 +208,34 @@
                 <span class="logo-quick" style="color: white;">Quick</span><span class="logo-accurate" style="color: var(--accent-green);">Accurate</span>
                 <span class="logo-books" style="color: rgba(255,255,255,0.5);">BOOKS</span>
             </a>
-            <div class="nav-links" style="display: flex;">
-                <a href="index.html#services" style="color: white; opacity: 0.8;">Services</a>
-                <a href="blog.html" style="color: white; opacity: 0.8;">Blog</a>
-                <a href="glossary.html" style="color: var(--accent-green); font-weight: 700;">Glossary</a>
+            <div class="nav-links" style="display: flex; gap: 40px;">
+                <a href="index.html#services" style="color: white; opacity: 0.8; text-decoration: none;">Services</a>
+                <a href="blog.html" style="color: white; opacity: 0.8; text-decoration: none;">Blog</a>
+                <a href="glossary.html" style="color: var(--accent-green); font-weight: 700; text-decoration: none;">Glossary</a>
             </div>
             <a href="index.html#contact" class="btn-primary" style="padding: 12px 24px; font-size: 14px;">Free Consultation</a>
         </div>
     </nav>
 
     <!-- Hero Sandbox -->
-    <header class="glossary-hero">
-        <div class="glossary-hero-content">
-            <h1>The Ultimate Bookkeeping Glossary</h1>
-            <p>We believe financial clarity is the foundation of growth. Use our comprehensive dictionary to translate complex accounting jargon into actionable business intelligence.</p>
-            
-            <div class="search-container">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="glossarySearch" placeholder="Search for a term (e.g., 'Amortization', 'EBITDA')...">
+    <!-- Hero Section -->
+    <section class="hero" id="glossary-hero">
+        <div class="hero-image-wrapper">
+            <img src="hero-bg.png" alt="Quick Accurate Books Glossary" class="hero-image" fetchpriority="high">
+        </div>
+        <div class="hero-text-section" style="background: var(--section-gradient); padding: 80px 0; text-align: center;">
+            <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 24px;">
+                <h1 style="font-family: var(--font-display); font-size: 56px; line-height: 1.2; color: white; margin-bottom: 20px; font-weight: 800;">The Ultimate Bookkeeping Glossary</h1>
+                <p style="font-size: 22px; color: var(--accent-green); font-weight: 600; margin-bottom: 12px;">Accounting Dictionary for Entrepreneurs</p>
+                <p style="font-size: 18px; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto 32px;">Translate complex accounting jargon into actionable business intelligence with our comprehensive dictionary.</p>
+                
+                <div class="search-container" style="max-width: 600px; margin: 0 auto; position: relative; background: white; border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                    <span class="search-icon" style="margin-right: 12px; font-size: 20px;">🔍</span>
+                    <input type="text" id="glossarySearch" placeholder="Search for a term (e.g., 'Amortization', 'EBITDA')..." style="border: none; outline: none; width: 100%; font-size: 16px; font-family: var(--font-primary);">
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Alphabet Filter -->
     <div class="glossary-alphabet" id="alphabet-container">

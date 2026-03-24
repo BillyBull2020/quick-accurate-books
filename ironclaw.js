@@ -1,5 +1,6 @@
 const fs = require('fs');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI, SchemaType } = require('@google/generative-ai');
+require('dotenv').config();
 
 console.log("Welcome to the Ironclaw SEO Autopilot for Quick Accurate Books.");
 
@@ -37,10 +38,22 @@ async function runIronclaw() {
   `;
 
   try {
+    const schema = {
+      type: SchemaType.OBJECT,
+      properties: {
+        title: { type: SchemaType.STRING },
+        slug: { type: SchemaType.STRING },
+        excerpt: { type: SchemaType.STRING },
+        content: { type: SchemaType.STRING, description: "HTML content entirely minified onto one single string line with no raw /n escape sequences." }
+      },
+      required: ["title", "slug", "excerpt", "content"]
+    };
+
     const model = genAI.getGenerativeModel({ 
       model: "gemini-2.5-flash",
       generationConfig: {
         responseMimeType: "application/json",
+        responseSchema: schema,
         temperature: 0.9
       }
     });
@@ -54,7 +67,13 @@ async function runIronclaw() {
       rawText = rawText.replace(/```/g, '').trim();
     }
 
-    const blogData = JSON.parse(rawText);
+    let blogData;
+    try {
+      blogData = JSON.parse(rawText.replace(/\\n/g, '').replace(/\\r/g, ''));
+    } catch (e) {
+      // Emergency fallback parsing
+      blogData = JSON.parse(rawText.replace(/\n/g, '\\n').replace(/\r/g, '\\r').replace(/\t/g, '\\t').replace(/[\x00-\x1F\x7F-\x9F]/g, ''));
+    }
 
     console.log(`Successfully generated new blog: ${blogData.title}`);
 
