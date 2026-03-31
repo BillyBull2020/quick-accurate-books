@@ -35,18 +35,23 @@
     </script>
 </head>
 <body style='background: var(--gray-50);'>
-    <nav class='navbar' style='background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0;'>
-        <div class='container' style='display: flex; justify-content: space-between; align-items: center;'>
-            <a href='index.html' class='logo' style='text-decoration: none;'>
-                <span class='logo-quick' style='color: white;'>Quick</span><span class='logo-accurate' style='color: var(--accent-green);'>Accurate</span>
-                <span class='logo-books' style='color: rgba(255,255,255,0.5);'>BOOKS</span>
+            <nav class="navbar" style="background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">
+                <span class="logo-quick" style="color: white;">Quick</span><span class="logo-accurate" style="color: var(--accent-green);">Accurate</span>
+                <span class="logo-books" style="color: rgba(255,255,255,0.5);">BOOKS</span>
             </a>
-            <div class='nav-links' style='display: flex; gap: 40px;'>
-                <a href='index.html#services' style='color: white; opacity: 0.8; text-decoration: none;'>Services</a>
-                <a href='blog.html' style='color: var(--accent-green); font-weight: 700; text-decoration: none;'>Blog</a>
-                <a href='glossary.html' style='color: white; opacity: 0.8; text-decoration: none;'>Glossary</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span style="background-color: white;"></span>
+                <span style="background-color: white;"></span>
+                <span style="background-color: white;"></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="blog.html" style="color: var(--accent-green); font-weight: 700;">Blog</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="index.html#contact" class="btn-primary cta-button">Free Consultation</a>
             </div>
-            <a href='index.html#contact' class='btn-primary' style='padding: 12px 24px; font-size: 14px;'>Free Consultation</a>
         </div>
     </nav>
     <!-- Hero Section -->
@@ -193,6 +198,19 @@
                         <span>March 24, 2026</span>
                     </div>
                     <a href="proactive-bookkeeping-strategies-thornton-small-businesses.html" class="read-more">Read Full Guide →</a>
+                </div>
+            </article>
+            
+            <article class="blog-preview">
+                <div class="blog-preview-content">
+                    <span class="blog-preview-category">Bookkeeping</span>
+                    <h2>Forecasting for Profit: Proactive Bookkeeping Strategies for Thornton's Entrepreneurs</h2>
+                    <p>Discover how proactive bookkeeping strategies, not just reactive record-keeping, can transform your small business's financial future in Thornton. Learn to leverage financial data for strategic decision-making and sustainable growth, turning your books into a powerful forecasting tool.</p>
+                    <div class="blog-preview-meta">
+                        <span>Tanya L. Frank</span>
+                        <span>March 30, 2026</span>
+                    </div>
+                    <a href="forecasting-for-profit-proactive-bookkeeping-strategies-thornton-colorado.html" class="read-more">Read Full Guide →</a>
                 </div>
             </article>
             <!-- [IRONCLAW_HOOK] -->
@@ -349,5 +367,6 @@
             <p style="margin-top: 60px; opacity: 0.6; font-size: 14px;">© 2026 Quick Accurate Books. All rights reserved.</p>
         </div>
     </footer>
+<script defer src="script.js?v=4"></script>
 </body>
 </html>

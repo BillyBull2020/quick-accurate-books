@@ -1,197 +1,224 @@
 // Quick Accurate Books - GSAP Animations
 // Clean, fast implementation
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 // Detect mobile for animation adjustments
 const isMobile = window.innerWidth <= 768;
 
-// ===== HERO ANIMATIONS - Run immediately =====
-const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+// // ===== HERO ANIMATIONS - Run immediately =====
+if (typeof gsap !== 'undefined') {
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-heroTl
-    .to('.hero-title span', {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.15
-    })
-    .to('.hero-subtitle', {
-        opacity: 1,
-        duration: 0.6
-    }, '-=0.4')
-    .to('.hero-description', {
-        opacity: 1,
-        duration: 0.6
-    }, '-=0.3')
-    .to('.hero-buttons', {
-        opacity: 1,
-        duration: 0.6
-    }, '-=0.3')
-    .to('.hero-trust-badges', {
-        opacity: 1,
-        y: 0,
-        duration: 0.6
-    }, '-=0.3')
-    .to('.floating-card', {
-        opacity: 1,
-        x: 0,
+    heroTl
+        .to('.hero-title span', {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15
+        })
+        .to('.hero-subtitle', {
+            opacity: 1,
+            duration: 0.6
+        }, '-=0.4')
+        .to('.hero-description', {
+            opacity: 1,
+            duration: 0.6
+        }, '-=0.3')
+        .to('.hero-buttons', {
+            opacity: 1,
+            duration: 0.6
+        }, '-=0.3')
+        .to('.hero-trust-badges', {
+            opacity: 1,
+            y: 0,
+            duration: 0.6
+        }, '-=0.3')
+        .to('.floating-card', {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            stagger: 0.15
+        }, '-=0.4');
+
+    // ===== SCROLL-TRIGGERED ANIMATIONS =====
+
+    // Certifications Section
+    gsap.from('.cert-card', {
+        scrollTrigger: {
+            trigger: '.certifications',
+            start: 'top 75%'
+        },
+        opacity: 0,
+        y: 50,
         duration: 0.6,
         stagger: 0.15
-    }, '-=0.4');
+    });
 
-// ===== SCROLL-TRIGGERED ANIMATIONS =====
+    // Services Section
+    gsap.from('.services .section-header', {
+        scrollTrigger: {
+            trigger: '.services',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.6
+    });
 
-// Certifications Section
-gsap.from('.cert-card', {
-    scrollTrigger: {
-        trigger: '.certifications',
-        start: 'top 75%'
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.6,
-    stagger: 0.15
-});
+    gsap.from('.service-card', {
+        scrollTrigger: {
+            trigger: '.services-grid',
+            start: 'top 75%'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        stagger: 0.1
+    });
 
-// Services Section
-gsap.from('.services .section-header', {
-    scrollTrigger: {
-        trigger: '.services',
-        start: 'top 80%'
-    },
-    opacity: 0,
-    y: 40,
-    duration: 0.6
-});
+    // About Section
+    gsap.from('.about-image', {
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: isMobile ? 0 : -50,
+        duration: 0.8
+    });
 
-gsap.from('.service-card', {
-    scrollTrigger: {
-        trigger: '.services-grid',
-        start: 'top 75%'
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.5,
-    stagger: 0.1
-});
+    gsap.from('.about-text', {
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: isMobile ? 0 : 50,
+        duration: 0.8
+    });
 
-// About Section
-gsap.from('.about-image', {
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: isMobile ? 0 : -50,
-    duration: 0.8
-});
+    // Exclusions Section
+    gsap.from('.exclusions-text', {
+        scrollTrigger: {
+            trigger: '.exclusions',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: -40,
+        duration: 0.8
+    });
 
-gsap.from('.about-text', {
-    scrollTrigger: {
-        trigger: '.about',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: isMobile ? 0 : 50,
-    duration: 0.8
-});
+    gsap.from('.focus-badge', {
+        scrollTrigger: {
+            trigger: '.exclusions',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        scale: 0.5,
+        rotation: -180,
+        duration: 1,
+        ease: 'back.out(1.5)'
+    });
 
-// Exclusions Section
-gsap.from('.exclusions-text', {
-    scrollTrigger: {
-        trigger: '.exclusions',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: -40,
-    duration: 0.8
-});
+    // Testimonials Section
+    gsap.from('.testimonials .section-header', {
+        scrollTrigger: {
+            trigger: '.testimonials',
+            start: 'top 80%'
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.6
+    });
 
-gsap.from('.focus-badge', {
-    scrollTrigger: {
-        trigger: '.exclusions',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    scale: 0.5,
-    rotation: -180,
-    duration: 1,
-    ease: 'back.out(1.5)'
-});
+    gsap.from('.testimonial-card', {
+        scrollTrigger: {
+            trigger: '.testimonials-grid',
+            start: 'top 75%'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        stagger: 0.15
+    });
 
-// Testimonials Section
-gsap.from('.testimonials .section-header', {
-    scrollTrigger: {
-        trigger: '.testimonials',
-        start: 'top 80%'
-    },
-    opacity: 0,
-    y: 40,
-    duration: 0.6
-});
+    // Location Section
+    gsap.from('.location-text', {
+        scrollTrigger: {
+            trigger: '.location',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: isMobile ? 0 : -40,
+        duration: 0.8
+    });
 
-gsap.from('.testimonial-card', {
-    scrollTrigger: {
-        trigger: '.testimonials-grid',
-        start: 'top 75%'
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.5,
-    stagger: 0.15
-});
+    gsap.from('.map-visual', {
+        scrollTrigger: {
+            trigger: '.location',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        scale: 0.5,
+        duration: 0.8,
+        ease: 'back.out(1.5)'
+    });
 
-// Location Section
-gsap.from('.location-text', {
-    scrollTrigger: {
-        trigger: '.location',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: isMobile ? 0 : -40,
-    duration: 0.8
-});
+    // Contact Section
+    gsap.from('.contact-info', {
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: isMobile ? 0 : -40,
+        duration: 0.8
+    });
 
-gsap.from('.map-visual', {
-    scrollTrigger: {
-        trigger: '.location',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    scale: 0.5,
-    duration: 0.8,
-    ease: 'back.out(1.5)'
-});
+    gsap.from('.contact-card', {
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 70%'
+        },
+        opacity: 0,
+        x: isMobile ? 0 : 40,
+        duration: 0.8
+    });
 
-// Contact Section
-gsap.from('.contact-info', {
-    scrollTrigger: {
-        trigger: '.contact',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: isMobile ? 0 : -40,
-    duration: 0.8
-});
+    // ===== BUTTON HOVER EFFECTS =====
+    document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            gsap.to(btn, { scale: 1.05, duration: 0.2 });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { scale: 1, duration: 0.2 });
+        });
+    });
 
-gsap.from('.contact-card', {
-    scrollTrigger: {
-        trigger: '.contact',
-        start: 'top 70%'
-    },
-    opacity: 0,
-    x: isMobile ? 0 : 40,
-    duration: 0.8
-});
+    // ===== SERVICE CARD HOVER =====
+    document.querySelectorAll('.service-card').forEach(card => {
+        const icon = card.querySelector('.service-icon');
+        card.addEventListener('mouseenter', () => {
+            gsap.to(icon, { scale: 1.2, rotation: 10, duration: 0.3, ease: 'back.out(1.5)' });
+        });
+        card.addEventListener('mouseleave', () => {
+            gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3 });
+        });
+    });
+}
 
 // ===== NAVBAR SCROLL EFFECT =====
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+        } else {
+            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        }
     }
 });
 
@@ -205,28 +232,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         }
     });
 });
-
-// ===== BUTTON HOVER EFFECTS =====
-document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        gsap.to(btn, { scale: 1.05, duration: 0.2 });
-    });
-    btn.addEventListener('mouseleave', () => {
-        gsap.to(btn, { scale: 1, duration: 0.2 });
-    });
-});
-
-// ===== SERVICE CARD HOVER =====
-document.querySelectorAll('.service-card').forEach(card => {
-    const icon = card.querySelector('.service-icon');
-    card.addEventListener('mouseenter', () => {
-        gsap.to(icon, { scale: 1.2, rotation: 10, duration: 0.3, ease: 'back.out(1.5)' });
-    });
-    card.addEventListener('mouseleave', () => {
-        gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3 });
-    });
-});
-
 console.log('✅ Quick Accurate Books animations loaded');
 
 // ===== MOBILE MENU TOGGLE =====
@@ -234,7 +239,8 @@ const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent document click from immediately closing
         mobileMenuBtn.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
@@ -246,7 +252,16 @@ if (mobileMenuBtn && navLinks) {
             navLinks.classList.remove('active');
         });
     });
+
+    // Support for bfcache so it doesn't get stuck open when returning via the back button
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
 }
+
 
 // ===== EXIT INTENT POPUP =====
 const exitPopup = document.getElementById('exit-popup');

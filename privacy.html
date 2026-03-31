@@ -16,16 +16,22 @@
     </style>
 </head>
 <body>
-    <nav class="navbar" style="background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <nav class="navbar" style="background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
             <a href="index.html" class="logo" style="text-decoration: none;">
                 <span class="logo-quick" style="color: white;">Quick</span><span class="logo-accurate" style="color: var(--accent-green);">Accurate</span>
                 <span class="logo-books" style="color: rgba(255,255,255,0.5);">BOOKS</span>
             </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span style="background-color: white;"></span>
+                <span style="background-color: white;"></span>
+                <span style="background-color: white;"></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html#services" style="color: white; opacity: 0.8;">Services</a>
-                <a href="blog.html" style="color: white; opacity: 0.8;">Blog</a>
-                <a href="index.html#contact" class="btn-primary" style="padding: 12px 24px; font-size: 14px;">Free Consultation</a>
+                <a href="index.html#services">Services</a>
+                <a href="blog.html" style="color: var(--accent-green); font-weight: 700;">Blog</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="index.html#contact" class="btn-primary cta-button">Free Consultation</a>
             </div>
         </div>
     </nav>
@@ -78,5 +84,6 @@
             </div>
         </div>
     </footer>
+<script defer src="script.js?v=4"></script>
 </body>
 </html>

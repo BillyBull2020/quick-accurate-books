@@ -3,7 +3,7 @@
 # Set up full environment PATHs because Cron runs in an empty context
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Move into the server root
-cd "/Users/bdlt/QuickAccutrateBooks" || exit
+cd "/Users/bdlt/BioD2026/QuickAccutrateBooks" || exit
 
 # Load environment variables
 if [ -f .env ]; then
