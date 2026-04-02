@@ -98,3 +98,101 @@ Updated blog.html directory index.
 Updated and rebuilt sitemap.xml for SEO Indexing.
 Ironclaw complete. Exiting gracefully.
 Ironclaw completed successfully. Pushing to GitHub and Firebase...
+To https://github.com/BillyBull2020/quick-accurate-books.git
+   9ba1026..5890fb6  master -> master
+
+=== Deploying to 'quick-accurate-books'...
+
+i  deploying hosting
+i  hosting[quick-accurate-books]: beginning deploy...
+i  hosting[quick-accurate-books]: found 415 files in .
+✔  hosting[quick-accurate-books]: file upload complete
+i  hosting[quick-accurate-books]: finalizing version...
+✔  hosting[quick-accurate-books]: version finalized
+i  hosting[quick-accurate-books]: releasing new version...
+✔  hosting[quick-accurate-books]: release complete
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/quick-accurate-books/overview
+Hosting URL: https://quick-accurate-books.web.app
+[=== Finished Ironclaw Execution: Mon Mar 30 21:24:25 MDT 2026 ===]
+[=== Starting Ironclaw Execution: Thu Apr  2 16:44:51 MDT 2026 ===]
+/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw-trigger.sh: line 24: /usr/local/bin/node: No such file or directory
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Thu Apr  2 16:46:10 MDT 2026 ===]
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Welcome to the Ironclaw SEO Autopilot for Quick Accurate Books.
+Analyzing current SEO rankings for QuickAccurateBooks.com...
+Fetching real-time local Bookkeeping keywords for Thornton, CO...
+Ironclaw encountered a fatal error during AI generation: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 48.873964142s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"48s"}]
+    at handleResponseNotOk (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async runIronclaw (/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js:68:20) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '48s'
+    }
+  ]
+}
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Thu Apr  2 16:48:15 MDT 2026 ===]
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Welcome to the Ironclaw SEO Autopilot for Quick Accurate Books.
+Analyzing current SEO rankings for QuickAccurateBooks.com...
+Fetching real-time local Bookkeeping keywords for Thornton, CO...
+Ironclaw encountered a fatal error during AI generation: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async runIronclaw (/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js:68:20) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Thu Apr  2 17:10:32 MDT 2026 ===]
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Welcome to the Ironclaw SEO Autopilot for Quick Accurate Books.
+Analyzing current SEO rankings for QuickAccurateBooks.com...
+Fetching real-time local Bookkeeping keywords for Thornton, CO...
+Ironclaw encountered a fatal error during AI generation: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 27.082606953s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"27s"}]
+    at handleResponseNotOk (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/bdlt/BioD2026/QuickAccutrateBooks/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async runIronclaw (/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js:68:20) {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '27s'
+    }
+  ]
+}
+ERROR: Ironclaw failed to run.
