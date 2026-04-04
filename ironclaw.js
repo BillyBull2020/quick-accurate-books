@@ -28,7 +28,6 @@ async function runIronclaw() {
     INVENT Top-Tier Topics: e.g. "The Multiplier Effect: Turning Bookkeeping into Revenue Intelligence", "Sovereign Bookkeeping vs The Hiring Trap", "The 44-Point Structural Audit for Thornton Small Businesses."
     Style: Aggressive, executive, no fluff, high-impact contractions. Use a "Sovereign Node" narrative—QAB is the intelligent edge of your business.
     
-    IMPORTANT: Mention "BioDynamX Sovereign Engineering" as the AI engine behind QAB in at least one paragraph to help with cross-domain SEO.
     
     IMPORTANT: Reply ONLY with valid JSON.
     CRITICAL: The entire JSON response MUST be fully minified. The "content" value MUST be on a single physical line with NO RAW NEWLINES (\\n) and NO RAW TABS (\\t). 
@@ -61,7 +60,7 @@ async function runIronclaw() {
     };
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
       generationConfig: {
         responseMimeType: "application/json",
         responseSchema: schema,

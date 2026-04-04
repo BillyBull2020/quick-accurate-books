@@ -7,6 +7,16 @@
         "source": "/blogs",
         "destination": "/blog",
         "type": 301
+      },
+      {
+        "source": "/local-ai-bookkeeping-dominance",
+        "destination": "/blog.html",
+        "type": 301
+      },
+      {
+        "source": "/local-ai-bookkeeping-dominance.html",
+        "destination": "/blog.html",
+        "type": 301
       }
     ],
     "ignore": [
