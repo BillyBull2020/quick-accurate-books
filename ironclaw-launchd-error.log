@@ -1,0 +1,1 @@
+/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw-trigger.sh: line 24:  1078 Killed: 9               /opt/homebrew/bin/node ironclaw.js >> ironclaw-cron.log 2>&1
