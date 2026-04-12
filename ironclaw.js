@@ -16,11 +16,11 @@ if (!geminiKey) {
 }
 
 async function generateWithAI(prompt) {
-  console.log("♊ Using Direct Gemini Free Tier (gemini-2.5-flash)...");
+  console.log("♊ Using Direct Gemini Free Tier (gemini-pro-latest)...");
   const { GoogleGenerativeAI } = require('@google/generative-ai');
   const genAI = new GoogleGenerativeAI(geminiKey);
   // Optimized for 2026 standard free tier
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-pro-latest" });
   const result = await model.generateContent(prompt);
   return result.response.text();
 }
