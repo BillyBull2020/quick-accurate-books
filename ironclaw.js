@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
-console.log("🦅 Commencing IronClaw All-Terrain Strike for QAB.");
+console.log("🦅 Commencing IronClaw All-Terrain Strike for QAB (Thornton, CO).");
 
 const geminiKeys = [
   process.env.GEMINI_API_KEY,
@@ -79,7 +79,7 @@ async function generateWithAI(prompt) {
 async function runIronclaw() {
   const prompt = `
     You are an Elite AI Swarm working for "Quick Accurate Books", based in Thornton, Colorado.
-    Generate a high-impact, long-form SEO blog post.
+    Generate a high-impact, long-form SEO blog post ($0.00 AI Cost).
     Return ONLY a JSON object.
     {
       "title": "Viral Click-Trigger Title",
@@ -89,8 +89,8 @@ async function runIronclaw() {
       "tags": ["Tag1", "Tag2"],
       "imagePrompt": "Cinematic photography, liquid gold tech, Thornton skyline, 8k",
       "content": "Full inner HTML content. Min 1000 words.",
-      "facebookCopy": "Facebook post.",
-      "linkedinCopy": "LinkedIn post."
+      "facebookCopy": "Facebook post for Thornton business owners.",
+      "linkedinCopy": "LinkedIn post for the Colorado bookkeeping market."
     }
     `;
 
@@ -101,17 +101,39 @@ async function runIronclaw() {
     if (!jsonMatch) throw new Error("No JSON found in AI response");
     const blogData = JSON.parse(jsonMatch[0]);
 
+    console.log(`✅ QAB Generated: ${blogData.title}`);
+
+    const imagePrompt = encodeURIComponent(blogData.imagePrompt);
+    const imageUrl = `https://pollinations.ai/p/${imagePrompt}?width=1200&height=630&seed=${Math.floor(Math.random() * 100000)}&nologo=true&model=flux`;
+
+    // Dispatch to Social Kill-Chain
+    if (process.env.SOCIAL_WEBHOOK_URL_QAB || process.env.SOCIAL_WEBHOOK_URL) {
+      const webhook = process.env.SOCIAL_WEBHOOK_URL_QAB || process.env.SOCIAL_WEBHOOK_URL;
+      console.log("📡 Dispatching QAB Social payload...");
+      await fetch(webhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          project: "Quick Accurate Books",
+          location: "Thornton, CO",
+          title: blogData.title,
+          slug: blogData.slug,
+          image: imageUrl,
+          facebook: blogData.facebookCopy,
+          linkedin: blogData.linkedinCopy
+        })
+      }).catch(e => console.warn("⚠️ Social Dispatch Failed (QAB):", e.message));
+    }
+
     const fileName = `${blogData.slug}.html`;
     const templatePath = path.join(__dirname, 'tax-season-stress-free-guide.html');
     let masterTemplate = fs.readFileSync(templatePath, 'utf8');
 
-    // [Simplified replacement logic for brevity, same as previous version]
+    // [Template replacement logic here as per previous versions]
     masterTemplate = masterTemplate.replace(/<title>.*?<\/title>/, `<title>${blogData.title} | Quick Accurate Books</title>`);
-    const imagePrompt = encodeURIComponent(blogData.imagePrompt);
-    const imageUrl = `https://pollinations.ai/p/${imagePrompt}?width=1200&height=630&seed=${Math.floor(Math.random() * 100000)}&nologo=true&model=flux`;
-
     fs.writeFileSync(path.join(__dirname, fileName), masterTemplate);
-    console.log(`✅ QAB Strike Successful: ${fileName}`);
+
+    console.log(`🚀 QAB Strike Successful: ${fileName}`);
 
   } catch (error) {
     console.error("💥 QAB Ironclaw Fatal:", error);
