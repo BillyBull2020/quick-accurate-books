@@ -1,0 +1,33 @@
+name: Ironclaw Daily SEO & Social Autopilot
+
+on:
+  schedule:
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Run Ironclaw Autopilot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node ironclaw.js
+          
+      - name: Commit Content
+        run: |
+          git config --global user.name 'Ironclaw'
+          git add .
+          git commit -m "auto: new content" || echo "none"
+          git push origin master
+          
+      - name: Deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QAB }}
+          projectId: quick-accurate-books
+          channelId: live
