@@ -1,0 +1,45 @@
+name: Ironclaw Daily SEO & Social Autopilot
+
+on:
+  schedule:
+    # Runs at 12:30 UTC
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Run Ironclaw Autopilot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node ironclaw.js
+
+      - name: Commit New Content
+        run: |
+          git config --global user.name 'Ironclaw Autopilot'
+          git config --global user.email 'ironclaw@biodynamx.com'
+          git add *.html blog.html sitemap.xml IRONCLAW_SOCIAL_RECON.log
+          git commit -m "chore(auto): ironclaw generated new seo & social optimized blog post" || echo "No changes to commit"
+          git push origin master
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QAB }}
+          projectId: quick-accurate-books
+          channelId: live
