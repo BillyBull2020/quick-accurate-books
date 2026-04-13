@@ -699,3 +699,8 @@ Ironclaw encountered a fatal error during AI generation: GoogleGenerativeAIFetch
   errorDetails: undefined
 }
 ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Sun Apr 12 22:59:48 MDT 2026 ===]
+[dotenv@17.3.1] injecting env (44) from ../.env -- tip: 🛡️ auth for agents: https://vestauth.com
+🦅 QAB (Thornton) Roofing Strike: Internal SEO Production Only...
+💥 QAB Fail: Expected ',' or '}' after property value in JSON at position 8463 (line 4 column 8320)
+Ironclaw completed successfully. Pushing to GitHub and Firebase...

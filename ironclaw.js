@@ -1,6 +1,8 @@
 /**
- * 🦅 IronClaw SEO Swarm Strike for Quick Accurate Books
- * SEO ONLY Engine (Thornton, CO)
+ * 🦅 Quick Accurate Books - ROOFING SECTOR STRIKE (Internal)
+ * Target: Thornton Roofing Bookkeeping.
+ * STATUS: SEO ONLY. NO SOCIAL DISPATCH.
+ * Entity: Quick Accurate Books / Thornton.
  */
 const fs = require('fs');
 const path = require('path');
@@ -37,30 +39,36 @@ async function generateWithAI(prompt) {
 }
 
 async function runIronclaw() {
-  console.log("🦅 QAB Engine (Thornton): Commencing Internal SEO Strike...");
-  const topics = ["Hidden Revenue Leaks", "Sovereign Bookkeeping", "Thornton Tax Strategy"];
-  const dailyTopic = topics[Math.floor(Math.random() * topics.length)];
+  console.log("🦅 QAB (Thornton) Roofing Strike: Internal SEO Production Only...");
 
-  const prompt = `    You are an AI for Quick Accurate Books, Thornton, Colorado.
-    Generate a long-form SEO blog. Return ONLY JSON.
-    TOPIC: ${dailyTopic}
+  const prompt = `
+    You are an AI for Quick Accurate Books, Thornton, Colorado.
+    Target: Thornton Roofing Companies (Specialized Bookkeeping).
+    Topic: "Revenue Leak Audit: Why Thornton Roofers are losing $10k+ in uncaptured hail claims."
+    
+    Return ONLY a JSON object:
     {
-      "title": "Viral Click-Trigger Title about ${dailyTopic}",
-      "slug": "kebab-case-slug",
-      "content": "HTML content. Address Thornton business owners."
-    }`;
+      "title": "Thornton Roofing Revenue Leak Audit: Stop Losing Profit to Old-World Accounting",
+      "slug": "thornton-roofing-bookkeeping-audit",
+      "content": "Full inner HTML content. Min 1000 words. Technical bookkeeping advice for North Denver roofers."
+    }
+    `;
 
   try {
     const aiResponseRaw = await generateWithAI(prompt);
+    if (!aiResponseRaw) return;
     const jsonStr = aiResponseRaw.substring(aiResponseRaw.indexOf('{'), aiResponseRaw.lastIndexOf('}') + 1);
     const blogData = JSON.parse(jsonStr);
 
-    console.log(`✅ QAB Blog Generated: ${blogData.title}`);
-    // NO SOCIAL DISPATCH.
+    console.log(`✅ QAB Internal Roofing Blog Generated: ${blogData.title}`);
+
     const fileName = `${blogData.slug}.html`;
     fs.writeFileSync(path.join(__dirname, fileName), blogData.content);
+    console.log(`🚀 QAB SEO LIVE: ${fileName} (NO SOCIAL POSTING)`);
+
   } catch (e) {
     console.error("💥 QAB Fail:", e.message);
   }
 }
+
 runIronclaw();
