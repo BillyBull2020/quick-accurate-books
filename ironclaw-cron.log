@@ -704,3 +704,285 @@ ERROR: Ironclaw failed to run.
 🦅 QAB (Thornton) Roofing Strike: Internal SEO Production Only...
 💥 QAB Fail: Expected ',' or '}' after property value in JSON at position 8463 (line 4 column 8320)
 Ironclaw completed successfully. Pushing to GitHub and Firebase...
+To https://github.com/BillyBull2020/quick-accurate-books.git
+   cd991e9..20fbfdc  master -> master
+
+=== Deploying to 'quick-accurate-books'...
+
+i  deploying hosting
+i  hosting[quick-accurate-books]: beginning deploy...
+i  hosting[quick-accurate-books]: found 651 files in .
+i  hosting: uploading new files [41/59] (69%)
+i  hosting: upload complete
+✔  hosting[quick-accurate-books]: file upload complete
+i  hosting[quick-accurate-books]: finalizing version...
+✔  hosting[quick-accurate-books]: version finalized
+i  hosting[quick-accurate-books]: releasing new version...
+✔  hosting[quick-accurate-books]: release complete
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/quick-accurate-books/overview
+Hosting URL: https://quick-accurate-books.web.app
+[=== Finished Ironclaw Execution: Sun Apr 12 23:00:54 MDT 2026 ===]
+[=== Starting Ironclaw Execution: Mon Apr 13 07:00:04 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Mon Apr 13 21:12:55 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Tue Apr 14 07:00:09 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Tue Apr 14 20:06:39 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Tue Apr 14 22:28:49 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Wed Apr 15 05:28:17 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Wed Apr 15 07:02:47 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Wed Apr 15 10:33:48 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Thu Apr 16 07:00:05 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Fri Apr 17 07:08:21 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Sat Apr 18 07:00:05 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Sat Apr 18 13:25:37 MDT 2026 ===]
+node:internal/modules/cjs/loader:1478
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/bdlt/BioD2026/QuickAccutrateBooks/ironclaw.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v25.9.0
+ERROR: Ironclaw failed to run.
+[=== Starting Ironclaw Execution: Sun Apr 19 07:00:04 MDT 2026 ===]
+[dotenv@17.3.1] injecting env (49) from ../.env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+🦅 QAB (Thornton) Roofing Strike: Internal SEO Production Only...
+🦅 QAB Sovereign Strike: Testing Layer 0 with gemini-1.5-flash...
+🦅 QAB Sovereign Strike: Testing Layer 0 with gemini-1.5-pro...
+🦅 QAB Sovereign Strike: Testing Layer 0 with gemini-2.0-flash-exp...
+🦅 QAB Sovereign Strike: Testing Layer 0 with gemini-1.5-flash-8b...
+🦅 QAB Sovereign Strike: Testing Layer 1 with gemini-1.5-flash...
+🦅 QAB Sovereign Strike: Testing Layer 1 with gemini-1.5-pro...
+🦅 QAB Sovereign Strike: Testing Layer 1 with gemini-2.0-flash-exp...
+🦅 QAB Sovereign Strike: Testing Layer 1 with gemini-1.5-flash-8b...
+🦅 QAB Sovereign Strike: Testing Layer 2 with gemini-1.5-flash...
+🦅 QAB Sovereign Strike: Testing Layer 2 with gemini-1.5-pro...
+🦅 QAB Sovereign Strike: Testing Layer 2 with gemini-2.0-flash-exp...
+🦅 QAB Sovereign Strike: Testing Layer 2 with gemini-1.5-flash-8b...
+🦅 QAB Sovereign Strike: Testing Layer 3 with gemini-1.5-flash...
+🦅 QAB Sovereign Strike: Testing Layer 3 with gemini-1.5-pro...
+🦅 QAB Sovereign Strike: Testing Layer 3 with gemini-2.0-flash-exp...
+🦅 QAB Sovereign Strike: Testing Layer 3 with gemini-1.5-flash-8b...
+💥 QAB Fail: No AI response generated.
+Ironclaw completed successfully. Pushing to GitHub and Firebase...

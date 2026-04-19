@@ -21,7 +21,7 @@ fi
 echo "[=== Starting Ironclaw Execution: $(date) ===]" >> ironclaw-cron.log
 
 # 1. Run the AI generator
-/opt/homebrew/bin/node ironclaw.js >> ironclaw-cron.log 2>&1
+/opt/homebrew/bin/node qab-sovereign-strike.js >> ironclaw-cron.log 2>&1
 
 if [ $? -eq 0 ]; then
     echo "Ironclaw completed successfully. Pushing to GitHub and Firebase..." >> ironclaw-cron.log

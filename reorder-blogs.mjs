@@ -5,6 +5,7 @@ const blogPath = '/Users/bdlt/BioD2026/QuickAccutrateBooks/blog.html';
 const content = fs.readFileSync(blogPath, 'utf8');
 
 // Use regex to find all <article> blocks
+// We use a non-greedy match that respects the nested structure of our articles
 const articleRegex = /<article[\s\S]*?<\/article>/g;
 const articles = content.match(articleRegex) || [];
 
@@ -19,49 +20,50 @@ function extractDate(article) {
 }
 
 // Sort articles by date (Newest first)
-articles.sort((a, b) => extractDate(b) - extractDate(a));
+articles.sort((a, b) => {
+    const dateA = extractDate(a);
+    const dateB = extractDate(b);
+    return dateB - dateA;
+});
 
-// Spread out dates if they are the same
-const finalArticles = [];
-let currentDate = new Date(); // Start from today
-currentDate.setHours(0, 0, 0, 0);
-
-// We'll work backwards from today for the display (or just respect their existing dates but ensure 1/day)
-// Actually, let's just ensure they are in desc order and if two have same date, we move one back.
-const datesSeen = new Set();
-
-const processedArticles = articles.map((art, index) => {
-    let date = extractDate(art);
-
-    // If the date is 0 (not found) or we want to spread them out:
-    // Let's just force a daily schedule starting from March 30 downwards for the old ones
-    // Or just keep them but ensure unique.
-
-    let dateString = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-    while (datesSeen.has(dateString)) {
-        date.setDate(date.getDate() - 1);
-        dateString = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+// Process articles to ensure consistent formatting and valid dates
+const processedArticles = articles.map((art) => {
+    const date = extractDate(art);
+    // If date is invalid, we don't change it, but we log it
+    if (date.getTime() === 0) {
+        console.warn("Could not find date in article:", art.substring(0, 100));
+        return art;
     }
 
-    datesSeen.add(dateString);
+    const dateString = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    
+    // Ensure all use the 📅 emoji if they are modern
+    let newArt = art;
+    if (art.includes('👤') && !art.includes('📅')) {
+         newArt = art.replace(/(<span>)([A-Za-z]+ \d{1,2}, \d{4})(<\/span>)/, `$1📅 $2$3`);
+    }
 
-    // Replace the date in the article string
-    const newArt = art.replace(/(<span>📅\s*)([A-Za-z]+ \d{1,2}, \d{4})(<\/span>)/, `$1${dateString}$3`)
-        .replace(/(<span>)([A-Za-z]+ \d{1,2}, \d{4})(<\/span>)/, `$1${dateString}$3`);
     return newArt;
 });
 
-// Rebuild the HTML
-const gridStart = content.indexOf("<div class='blog-grid'>");
-const gridEnd = content.lastIndexOf("</div>", content.indexOf("<footer") - 1);
+// Rebuild the HTML - Find the grid container precisely
+const gridStartTag = "<div class='blog-grid'>";
+const gridStartIndex = content.indexOf(gridStartTag);
+if (gridStartIndex === -1) {
+    console.error("Could not find blog grid start!");
+    process.exit(1);
+}
 
-const beforeGrid = content.substring(0, gridStart + "<div class='blog-grid'>".length);
-const afterGrid = content.substring(gridEnd);
+// Find the end index - it's the </div> before the footer or navigation
+const footerIndex = content.indexOf("<footer");
+const gridEndIndex = content.lastIndexOf("</div>", footerIndex);
 
-const newGridContent = `\n            <!-- [IRONCLAW_HOOK] -->\n            ` + processedArticles.join('\n            ');
+const beforeGrid = content.substring(0, gridStartIndex + gridStartTag.length);
+const afterGrid = content.substring(gridEndIndex);
 
-const finalHtml = beforeGrid + newGridContent + afterGrid;
+// Add the hook at the TOP of the grid
+const hookContent = `\n            <!-- [IRONCLAW_HOOK] -->\n            `;
+const newHtml = beforeGrid + hookContent + processedArticles.join('\n            ') + afterGrid;
 
-fs.writeFileSync(blogPath, finalHtml);
-console.log("Successfully reordered blogs and moved the [IRONCLAW_HOOK] to the top.");
+fs.writeFileSync(blogPath, newHtml);
+console.log("Successfully reordered blogs and placed [IRONCLAW_HOOK] at the top.");
