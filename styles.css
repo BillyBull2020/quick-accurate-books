@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-blue: #1e3a8a;
-    /* Premium Blue - Force visible */
-    --primary-green: #0d9488;
-    --accent-green: #22c55e;
-    --section-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #22c55e 100%);
-    --section-gradient-reverse: linear-gradient(135deg, #22c55e 0%, #172554 60%, #0f172a 100%);
-    --dark-section: #0f172a;
-    --light-blue: #1e3a8a;
+    --primary-blue: #10b981;
+    /* Sovereign Emerald - Unified */
+    --primary-green: #059669;
+    --accent-green: #10b981;
+    --section-gradient: linear-gradient(135deg, #020617 0%, #064e3b 40%, #10b981 100%);
+    --section-gradient-reverse: linear-gradient(135deg, #10b981 0%, #064e3b 60%, #020617 100%);
+    --dark-section: #020617;
+    --light-blue: #059669;
     --dark: #020617;
     /* Deepest Charcoal */
     --white: #ffffff;
@@ -73,12 +73,12 @@ body {
 }
 
 .logo-quick {
-    color: var(--primary-blue);
+    color: var(--primary-emerald);
     font-style: italic;
 }
 
 .logo-accurate {
-    color: var(--primary-green);
+    color: var(--emerald-600);
     font-style: italic;
 }
 
@@ -88,7 +88,7 @@ body {
     color: var(--gray-600);
     letter-spacing: 2px;
     margin-top: -6px;
-    border-top: 3px solid var(--primary-blue) !important;
+    border-top: 3px solid var(--primary-emerald) !important;
     padding-top: 2px;
 }
 
@@ -114,13 +114,13 @@ body {
     color: var(--white) !important;
     padding: 12px 24px;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 /* Mobile Menu Button */
@@ -250,7 +250,7 @@ body {
 .btn-primary {
     display: inline-block;
     padding: 16px 36px;
-    background: linear-gradient(135deg, #22c55e, #10b981);
+    background: linear-gradient(135deg, #10b981, #059669);
     color: var(--white);
     text-decoration: none;
     border-radius: 50px;
@@ -264,7 +264,7 @@ body {
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(34, 197, 94, 0.5);
-    background: linear-gradient(135deg, #10b981, #22c55e);
+    background: linear-gradient(135deg, #059669, #10b981);
     color: white;
 }
 
@@ -623,7 +623,7 @@ section {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    box-shadow: 0 20px 60px rgba(30, 58, 138, 0.4);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.4);
 }
 
 .badge-inner {
@@ -2117,7 +2117,7 @@ section {
 
 /* ===== AVATAR & INITIALS VISIBILITY ===== */
 .avatar {
-    background: linear-gradient(135deg, #10b981, #3b82f6) !important;
+    background: linear-gradient(135deg, #10b981, #059669) !important;
     /* Brighter, more vibrant gradient */
     color: var(--white) !important;
     font-weight: 800 !important;

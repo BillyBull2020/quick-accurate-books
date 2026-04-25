@@ -10,7 +10,7 @@
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+    background: linear-gradient(135deg, var(--emerald-600), var(--accent-green));
     border: none;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(13, 148, 136, 0.4);
@@ -188,7 +188,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--light-blue);
+    background: var(--accent-green);
     border: none;
     color: var(--white);
     cursor: pointer;
