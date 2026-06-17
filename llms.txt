@@ -1,0 +1,8 @@
+# Quick Accurate Books
+# https://quickaccuratebooks.com
+
+Quick Accurate Books provides professional daily bookkeeping services in Thornton, Colorado. Founded by Tanya L. Frank, Intuit Certified QuickBooks ProAdvisor with 20+ years experience. Serving Brighton, Thornton, Broomfield, Northglenn, and Westminster with accurate, reliable, audit-ready financials.
+
+Core Services: Daily Bookkeeping, Financial Reporting, Bank Reconciliation, Accounts Management, Payroll Support, QuickBooks Training.
+
+Full entity manifest: https://quickaccuratebooks.com/llms-full.txt

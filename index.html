@@ -54,7 +54,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- Google Analytics - Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <!-- Google tag (gtag.js) - Place your GA Measurement ID below -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -63,19 +63,69 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 
-    <!-- Structured Data - Local Business -->
+    <!-- AI/GEO/AEO Meta Tags -->
+    <meta name="ai-content-declaration" content="human-authored">
+    <meta name="ai-summary" content="Quick Accurate Books: Professional daily bookkeeping services in Thornton, CO. Founded by Tanya L. Frank, Intuit Certified QuickBooks ProAdvisor (20+ years exp). Serving Brighton, Broomfield, Northglenn, Westminster. GEO/AEO optimized for LLM citation.">
+    <link rel="llms.txt" href="https://quickaccuratebooks.com/llms.txt" type="text/plain">
+    <link rel="llms-full.txt" href="https://quickaccuratebooks.com/llms-full.txt" type="text/plain">
+
+    <!-- Speakable Markup for Voice Assistants (AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["#hero .hero-description", "#services .service-card p", "#faq .faq-answer p"]
+      }
+    }
+    </script>
+
+    <!-- WebSite + SearchAction Schema (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://quickaccuratebooks.com/",
+      "name": "Quick Accurate Books",
+      "publisher": {
+        "@id": "https://quickaccuratebooks.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://quickaccuratebooks.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Cross-property entity references removed — separate businesses -->
+
+    <!-- Structured Data - Local Business with Entity @id Graph -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "AccountingService",
+        "@type": ["AccountingService", "ProfessionalService", "LocalBusiness"],
+        "@id": "https://quickaccuratebooks.com/#organization",
         "name": "Quick Accurate Books",
-        "description": "Professional bookkeeping services providing accurate, reliable daily bookkeeping for small businesses. QuickBooks certified experts serving Brighton, Thornton, Broomfield, Northglenn, and Westminster.",
+        "alternateName": "QAB",
+        "description": "Professional bookkeeping services providing accurate, reliable daily bookkeeping for small businesses. QuickBooks certified experts serving Brighton, Thornton, Broomfield, Northglenn, and Westminster. 20+ years experience. Audit-ready financials every month.",
         "url": "https://quickaccuratebooks.com",
+        "logo": "https://quickaccuratebooks.com/tanya-frank.jpg",
+        "image": "https://quickaccuratebooks.com/tanya-frank.jpg",
         "telephone": "+1-303-803-8597",
         "email": "tanya@quickaccuratebooks.com",
         "priceRange": "$$",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Check, Credit Card, Bank Transfer",
+        "foundingDate": "2004-01-01",
+        "slogan": "Accurate. Reliable. Trusted.",
         "address": {
             "@type": "PostalAddress",
+            "@id": "https://quickaccuratebooks.com/#address",
             "addressLocality": "Thornton",
             "addressRegion": "CO",
             "addressCountry": "US"
@@ -94,80 +144,78 @@
         ],
         "founder": {
             "@type": "Person",
+            "@id": "https://quickaccuratebooks.com/#founder-tanya-frank",
             "name": "Tanya L. Frank",
-            "jobTitle": "Founder & Lead Bookkeeper"
+            "givenName": "Tanya",
+            "additionalName": "L.",
+            "familyName": "Frank",
+            "jobTitle": "Founder & Lead Bookkeeper",
+            "worksFor": { "@id": "https://quickaccuratebooks.com/#organization" },
+            "image": "https://quickaccuratebooks.com/tanya-frank.jpg",
+            "url": "https://quickaccuratebooks.com",
+            "description": "Founder of Quick Accurate Books, Intuit Certified QuickBooks ProAdvisor with 20+ years of experience. Dedicated to helping businesses thrive through accurate, reliable daily bookkeeping.",
+            "knowsAbout": [
+                "Bookkeeping", "QuickBooks", "Financial Reporting",
+                "Accounts Payable", "Accounts Receivable", "Payroll Support",
+                "Bank Reconciliation", "Tax-Ready Financials", "QuickBooks Online"
+            ],
+            "hasCredential": [
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "Intuit Certified QuickBooks ProAdvisor", "recognizedBy": "Intuit" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "QuickBooks Level 1 Certified", "recognizedBy": "Intuit" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "QuickBooks Level 2 Certified", "recognizedBy": "Intuit" },
+                { "@type": "EducationalOccupationalCredential", "credentialCategory": "Professional Certification", "name": "QuickBooks Payroll Certified", "recognizedBy": "Intuit" }
+            ],
+            "award": ["20+ Years Expert Experience", "Intuit Certified QuickBooks ProAdvisor"],
+            "sameAs": ["https://quickaccuratebooks.com"]
         },
         "knowsAbout": [
-            "Bookkeeping",
-            "QuickBooks",
-            "Financial Reporting",
-            "Accounts Payable",
-            "Accounts Receivable",
-            "Payroll Support",
-            "Bank Reconciliation"
+            "Bookkeeping", "QuickBooks", "Financial Reporting",
+            "Accounts Payable", "Accounts Receivable", "Payroll Support",
+            "Bank Reconciliation", "Daily Bookkeeping", "Tax-Ready Financials",
+            "Small Business Finance", "QuickBooks Training"
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Bookkeeping Services",
             "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Daily Bookkeeping",
-                        "description": "Meticulous daily transaction recording and categorization"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Financial Reporting",
-                        "description": "Clear, comprehensive reports with real-time business insights"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Bank Reconciliation",
-                        "description": "Regular bank and credit card reconciliation"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Payroll Support",
-                        "description": "Accurate and timely payroll processing support"
-                    }
-                }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-daily-bookkeeping", "name": "Daily Bookkeeping", "description": "Meticulous daily transaction recording and categorization", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-financial-reporting", "name": "Financial Reporting", "description": "Clear, comprehensive reports with real-time business insights", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-bank-reconciliation", "name": "Bank Reconciliation", "description": "Regular bank and credit card reconciliation", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-accounts-management", "name": "Accounts Management", "description": "Professional AP/AR management to optimize cash flow", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-payroll-support", "name": "Payroll Support", "description": "Accurate and timely payroll processing support", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://quickaccuratebooks.com/#service-quickbooks-training", "name": "QuickBooks Training", "description": "Expert setup, cleanup, and personalized training", "provider": { "@id": "https://quickaccuratebooks.com/#organization" } } }
             ]
+        },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "50", "bestRating": "5", "worstRating": "1" },
+        "award": [
+            "Intuit Certified QuickBooks ProAdvisor",
+            "QuickBooks Level 1 Certified",
+            "QuickBooks Level 2 Certified",
+            "QuickBooks Payroll Certified",
+            "20+ Years Expert Experience"
+        ],
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
         },
         "sameAs": []
     }
     </script>
 
-    <!-- Structured Data - Professional Service -->
+    <!-- BreadcrumbList Schema (AEO/SEO) -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Quick Accurate Books",
-        "image": "https://quickaccuratebooks.com/tanya-frank.jpg",
-        "telephone": "+1-303-803-8597",
-        "email": "tanya@quickaccuratebooks.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Thornton",
-            "addressRegion": "Colorado",
-            "addressCountry": "USA"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "50"
-        }
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://quickaccuratebooks.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://quickaccuratebooks.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Bookkeeping Services", "item": "https://quickaccuratebooks.com/#services" },
+        { "@type": "ListItem", "position": 3, "name": "About Tanya Frank", "item": "https://quickaccuratebooks.com/#about" },
+        { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://quickaccuratebooks.com/#contact" }
+      ]
     }
     </script>
 
@@ -227,10 +275,10 @@
     <!-- Google tag (gtag.js) - Place your GA Measurement ID below -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
 </head>
 

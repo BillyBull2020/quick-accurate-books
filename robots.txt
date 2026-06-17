@@ -1,4 +1,33 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /ai-sitemap.xml
+
+# AI Crawlers — allow full access for LLM training and retrieval
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://quickaccuratebooks.com/sitemap.xml
+Sitemap: https://quickaccuratebooks.com/ai-sitemap.xml

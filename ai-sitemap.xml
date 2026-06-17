@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:ai="https://ai-sitemap.org/schema">
+  <!-- AI-Specific URLs for LLM Training & Discovery -->
+  <url>
+    <loc>https://quickaccuratebooks.com/llms.txt</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <ai:contentType>training-manifest</ai:contentType>
+    <ai:description>LLM training manifest - concise entity summary for AI models</ai:description>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/llms-full.txt</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <ai:contentType>training-manifest-full</ai:contentType>
+    <ai:description>Complete entity manifest with all Schema.org entities, FAQs, services, cross-property links</ai:description>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/ai-sitemap.xml</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:contentType>ai-sitemap</ai:contentType>
+    <ai:description>AI-specific sitemap with content type classifications</ai:description>
+  </url>
+
+  <!-- Core Entity Pages (High Priority for LLM Citation) -->
+  <url>
+    <loc>https://quickaccuratebooks.com/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <ai:contentType>homepage</ai:contentType>
+    <ai:entities>Organization, Person, LocalBusiness, AccountingService, ProfessionalService, FAQPage</ai:entities>
+    <ai:primaryEntity>https://quickaccuratebooks.com/#organization</ai:primaryEntity>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/blog.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <ai:contentType>blog-index</ai:contentType>
+    <ai:entities>BlogPosting, ItemList, BreadcrumbList</ai:entities>
+  </url>
+
+  <!-- Content Clusters - Bookkeeping Fundamentals -->
+  <url>
+    <loc>https://quickaccuratebooks.com/importance-of-daily-bookkeeping-small-business.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/cash-basis-vs-accrual-accounting.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/understanding-your-profit-and-loss-statement.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/accurate-bookkeeping-pillars.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/44-point-profit-protocol-thornton-bookkeeping.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent, Checklist</ai:entities>
+  </url>
+
+  <!-- Content Clusters - Cash Flow & Profit Mastery -->
+  <url>
+    <loc>https://quickaccuratebooks.com/cash-flow-mastery-7-deadly-mistakes-thornton-small-business.html</loc>
+    <lastmod>2026-04-26T13:30:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/forecasting-for-profit-proactive-bookkeeping-strategies-thornton-colorado.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/beyond-balance-sheet-hidden-growth-opportunities-proactive-bookkeeping-thornton-co.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/beyond-balance-sheet-hidden-profits-proactive-bookkeeping-thornton-small-businesses.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/beyond-balance-sheet-strategic-small-business-growth.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/hidden-costs-of-diy-bookkeeping.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-multiplier-effect-turning-bookkeeping-into-revenue-intelligence-thornton.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/sovereign-bookkeeping-unlock-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+
+  <!-- Content Clusters - QuickBooks Expertise -->
+  <url>
+    <loc>https://quickaccuratebooks.com/how-quickbooks-certification-protects-your-business.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>quickbooks-expertise</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/quickbooks-online-masterclass-thornton-small-business.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>quickbooks-expertise</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+
+  <!-- Content Clusters - Strategic Growth -->
+  <url>
+    <loc>https://quickaccuratebooks.com/proactive-bookkeeping-profit-tax-savings-small-business-thornton.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/proactive-bookkeeping-strategies-thornton-small-businesses.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/proactive-bookkeeping-sustainable-growth-small-business.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/strategic-bookkeeping-small-business-growth-investment-thornton.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/remote-bookkeeping-benefits.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/bookkeeping-red-flags-small-business-survival-growth.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, WarningSigns</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/when-to-outsource-your-bookkeeping.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, DecisionGuide</ai:entities>
+  </url>
+
+  <!-- Content Clusters - Compliance & Audit -->
+  <url>
+    <loc>https://quickaccuratebooks.com/preparing-your-business-for-an-audit.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/tax-season-stress-free-guide.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, SeasonalGuide</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/apex-financial-control-sovereign-bookkeeping-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-001.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-12345.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-123456.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-123456789.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-3347.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-cmdowu.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-unique_id.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-business-bookkeeping-audit-unique_id_1234.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/thornton-law-firm-profit-audit.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>compliance-audit</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+
+  <!-- Content Clusters - GEO/AEO Leadership (Differentiation) -->
+  <url>
+    <loc>https://quickaccuratebooks.com/beyond-search-geo-seo-strategy.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>geo-aeo-leadership</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent, TechArticle</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/sovereign-cfo-quick-accurate-books-financial-automation.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>geo-aeo-leadership</ai:topic>
+    <ai:entities>BlogPosting, Article, TechArticle</ai:entities>
+  </url>
+
+  <!-- Content Clusters - Advanced/Sovereign Bookkeeping -->
+  <url>
+    <loc>https://quickaccuratebooks.com/multiplier-effect-thornton-bookkeeping-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/sovereign-bookkeeping-multiplier-effect-thornton-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/sovereign-bookkeeping-qab-44-point-profit-protocol-thornton-smbs.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, Checklist</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/sovereign-bookkeeping-thornton-small-business-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-invisible-architecture.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, TechArticle</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-multiplier-effect-sovereign-revenue-intelligence.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-sovereign-bookkeeping-edge-unleashing-unrivaled-profit-thornton-small-businesses.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-sovereign-node-advantage-qabs-blueprint-thorntons-financial-dominion.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, TechArticle</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/qab-sovereign-edge-profit-matrix-elite-bookkeeping-thornton-smbs.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, TechArticle</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/unlock-elite-performance-44-point-structural-audit-qab-thornton.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, Checklist</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/unlocking-hidden-profits-thornton-small-business-bookkeeping.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+
+  <!-- Special Pages -->
+  <url>
+    <loc>https://quickaccuratebooks.com/glossary.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:contentType>glossary</ai:contentType>
+    <ai:entities>DefinedTermSet, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/clarity-architecture-bookkeeping-success.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>strategic-growth</ai:topic>
+    <ai:entities>BlogPosting, Article, EducationalContent</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/how-to-improve-accounts-receivable.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>bookkeeping-fundamentals</ai:topic>
+    <ai:entities>BlogPosting, Article, HowTo</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/denver-bookkeeping-sovereign-mastery-jpovye.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>sovereign-bookkeeping</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/the-invisible-roi-professional-bookkeeping.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:contentType>blog-post</ai:contentType>
+    <ai:topic>cash-flow-profit-mastery</ai:topic>
+    <ai:entities>BlogPosting, Article, CaseStudy</ai:entities>
+  </url>
+
+  <!-- Legal/Utility Pages -->
+  <url>
+    <loc>https://quickaccuratebooks.com/privacy.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <ai:contentType>legal</ai:contentType>
+    <ai:entities>WebPage, PrivacyPolicy</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/terms.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <ai:contentType>legal</ai:contentType>
+    <ai:entities>WebPage, TermsOfService</ai:entities>
+  </url>
+  <url>
+    <loc>https://quickaccuratebooks.com/auto-post.html</loc>
+    <lastmod>2026-04-12T13:39:00.710Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <ai:contentType>utility</ai:contentType>
+    <ai:entities>WebPage</ai:entities>
+  </url>
+
+  <!-- AI Training Data Summary -->
+  <ai:summary>
+    <ai:totalUrls>58</ai:totalUrls>
+    <ai:trainingManifests>2</ai:trainingManifests>
+    <ai:coreEntityPages>1</ai:coreEntityPages>
+    <ai:blogPosts>51</ai:blogPosts>
+    <ai:contentClusters>
+      <ai:cluster name="bookkeeping-fundamentals" count="6" priority="high"/>
+      <ai:cluster name="cash-flow-profit-mastery" count="8" priority="high"/>
+      <ai:cluster name="quickbooks-expertise" count="2" priority="medium"/>
+      <ai:cluster name="strategic-growth" count="7" priority="high"/>
+      <ai:cluster name="compliance-audit" count="11" priority="high"/>
+      <ai:cluster name="geo-aeo-leadership" count="2" priority="high"/>
+      <ai:cluster name="sovereign-bookkeeping" count="11" priority="medium"/>
+    </ai:contentClusters>
+    <ai:primaryEntity>https://quickaccuratebooks.com/#organization</ai:primaryEntity>
+    <ai:founderEntity>https://quickaccuratebooks.com/#founder-tanya-frank</ai:founderEntity>
+    <ai:areaServed>Thornton, Brighton, Broomfield, Northglenn, Westminster, Colorado</ai:areaServed>
+    <ai:certifications>Intuit Certified QuickBooks ProAdvisor, Level 1, Level 2, Payroll</ai:certifications>
+    <ai:yearsExperience>20+</ai:yearsExperience>
+    <ai:lastUpdated>2026-06-17</ai:lastUpdated>
+  </ai:summary>
+</urlset>
